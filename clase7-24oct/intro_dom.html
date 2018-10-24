@@ -37,6 +37,12 @@
         // 4.Agregar el elemento al documento
         document.getElementById("prueba").appendChild(elemento);
 
+        // PARTE 3. Posicionar un nodo
+        var padre = document.getElementsByTagName("p")[0].parentNode;
+        var hijo1 = document.getElementsByTagName("p")[1];
+
+        padre.insertBefore(elemento, hijo1);
+
     </script>
 </body>
 </html>
