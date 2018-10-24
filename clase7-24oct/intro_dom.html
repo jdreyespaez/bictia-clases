@@ -43,6 +43,15 @@
 
         padre.insertBefore(elemento, hijo1);
 
+        // PARTE 4. Modificar el contenido de un nodo
+        // Con .innerHTML sí modificar el HTML
+        elemento.innerHTML = "Querido <em>Pepe</em>";
+
+        // .textContent sólo imprime la forma plana
+        elementoP[2].textContent = "<em>TRES</em>";
+
+        // La diferencia está en la posibilidad de modificar el HTML o no.
+
     </script>
 </body>
 </html>
