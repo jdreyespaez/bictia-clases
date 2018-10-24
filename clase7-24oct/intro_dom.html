@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro DOM</title>
+</head>
+
+<body>
+    
+    <div>
+        <h1>Hola</h1>
+    </div>
+
+    <div id="prueba">
+        <p>Uno</p>
+        <p id="second">Dos</p>
+        <p>Tres</p>
+    </div>
+
+    <script>                
+        
+        // Acceder a un elemento por medio de etiquetas
+        var elementoP = document.getElementsByTagName("p");
+        // Acceder a un elemento por medio del Id
+        var segundo = document.getElementById("second");
+
+        // Crear nodo
+        // 1. Crear el elemento
+        var elemento = document.createElement("h2");
+        // 2. Crear nodo de texto
+        var contenido = document.createTextNode("Soy nuevo");
+        // 3. Agregar el nodo al elemento
+        elemento.appendChild(contenido);
+        // 4.Agregar el elemento al documento
+        document.getElementById("prueba").appendChild(elemento);
+
+    </script>
+</body>
+</html>
