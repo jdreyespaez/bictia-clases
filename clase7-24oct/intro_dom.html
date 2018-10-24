@@ -48,9 +48,16 @@
         elemento.innerHTML = "Querido <em>Pepe</em>";
 
         // .textContent sólo imprime la forma plana
-        elementoP[2].textContent = "<em>TRES</em>";
+        elementoP[1].textContent = "<em>DOS</em>";
 
         // La diferencia está en la posibilidad de modificar el HTML o no.
+
+        // PARTE 5. Reemplazar un nodo
+        var cambio = document.getElementsByTagName("p")[2];
+        padre.replaceChild(elemento, cambio);
+
+        // PARTE 6. Eliminar un nodo
+        padre.removeChild(elemento);
 
     </script>
 </body>
