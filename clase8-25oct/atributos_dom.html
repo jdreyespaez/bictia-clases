@@ -23,12 +23,17 @@
 
     .rojo {
         background: #ff0000;
-        border: 1pz solid #000;
+        border: 1px solid #000;
     }
     
     .amarillo {
         background: yellow;
-        border: 1pz solid #000;
+        border: 1px solid #000;
+    }
+
+    .miEstilo {
+        border: 3px dashed #000;
+        width: 33%;
     }
 
     </style>
@@ -59,6 +64,7 @@
 
         // PASO 2. Incluir el atributo
         // La sintaxis es así: variable.setAttribute("atributo", "valor");
+        // Nota: puedo agregar varias clases dejan un espacio entre las comillas
         elemento.setAttribute("class", "azul");
         // Otra forma de hacer es con .className, como se ve a continuación:
         // elemento.className = "rojo";
@@ -87,6 +93,15 @@
         // Ahora hay que pintarlo de azul
         var contenedorAzul = document.getElementById("texto");
         contenedorAzul.setAttribute("class", "azul");
+
+        // 3. Incluir fondo rojo y agregar estilos de mi preferencia
+        // Insertamos el elemento en HTML como se muestra en el PASO 1
+        var elementoRojo = document.createElement("div");
+        // Ya tengo el padre, se llama padre
+        // Ya tengo la variable de referencia, se llama ref
+        padre.insertBefore(elementoRojo, ref);
+        // Ahora lo pinto de rojo y le aplico miEstilo
+        elementoRojo.setAttribute("class", "rojo miEstilo");
 
     </script>
 </body>
