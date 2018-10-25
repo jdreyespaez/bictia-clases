@@ -36,6 +36,12 @@
         width: 33%;
     }
 
+    .miEstiloLibre {
+        border: 2px solid #a8b8c8;
+        border-radius: 10px;
+        width: 100%;
+    }
+
     </style>
 
 </head>
@@ -102,6 +108,14 @@
         padre.insertBefore(elementoRojo, ref);
         // Ahora lo pinto de rojo y le aplico miEstilo
         elementoRojo.setAttribute("class", "rojo miEstilo");
+
+        // 4. Agregar un elemento libre
+        // Creo el elemento que deseo agregar
+        var elementoLibre = document.createElement("div");
+        // Ya tengo el padre y la variable de referencia
+        padre.insertBefore(elementoLibre, ref);
+        // Ahora le aplico miEstiloLibre
+        elementoLibre.setAttribute("class", "miEstiloLibre");
 
     </script>
 </body>
