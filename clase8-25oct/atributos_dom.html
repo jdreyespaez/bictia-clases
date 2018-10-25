@@ -41,6 +41,7 @@
         
         <div class=""></div>
         <div class=""></div>
+        <div id="texto"></div>
 
     </section>
 
@@ -62,18 +63,30 @@
         // Otra forma de hacer es con .className, como se ve a continuación:
         // elemento.className = "rojo";
 
-        // Ejercicio en clase
+        // EJERCICIO EN CLASE
         // 1. Hacer un div que tenga fondo amarillo
         // Se define la clase que quiero usar .amarillo
         // Creo el elemento
         var elementoAmarillo = document.createElement("div");
         // Ya tengo el padre donde irá el elementoAmarillo, se llama padre
         // También tengo la variable de referencia, se llama ref
-        // var refAmarillo = document.getElementsByTagName("div")[1];
         padre.insertBefore(elementoAmarillo, ref);
         // Incluyo el atributo 
         elementoAmarillo.setAttribute("class", "amarillo");
 
+        // 2. Insertar un div azul con texto incluido
+        // Primero debo crear nodo
+        var elementoTexto = document.createElement("p");
+        // Ahora crearé el nodo con texto
+        var contenidoTextual = document.createTextNode("El texto del punto 2");
+        // Agrego el elemento al nodo
+        elementoTexto.appendChild(contenidoTextual);
+        // Meto el elementoTexto al documento
+        document.getElementById("texto").appendChild(elementoTexto);
+
+        // Ahora hay que pintarlo de azul
+        var contenedorAzul = document.getElementById("texto");
+        contenedorAzul.setAttribute("class", "azul");
 
     </script>
 </body>
