@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Intro DOM</title>
+    <title>Atributos DOM</title>
 
     <style>
     div {
@@ -26,6 +26,11 @@
         border: 1pz solid #000;
     }
     
+    .amarillo {
+        background: yellow;
+        border: 1pz solid #000;
+    }
+
     </style>
 
 </head>
@@ -54,8 +59,22 @@
         // PASO 2. Incluir el atributo
         // La sintaxis es así: variable.setAttribute("atributo", "valor");
         elemento.setAttribute("class", "azul");
-        // ref.setAttribute("class", "rojo");
-    
+        // Otra forma de hacer es con .className, como se ve a continuación:
+        // elemento.className = "rojo";
+
+        // Ejercicio en clase
+        // 1. Hacer un div que tenga fondo amarillo
+        // Se define la clase que quiero usar .amarillo
+        // Creo el elemento
+        var elementoAmarillo = document.createElement("div");
+        // Ya tengo el padre donde irá el elementoAmarillo, se llama padre
+        // También tengo la variable de referencia, se llama ref
+        // var refAmarillo = document.getElementsByTagName("div")[1];
+        padre.insertBefore(elementoAmarillo, ref);
+        // Incluyo el atributo 
+        elementoAmarillo.setAttribute("class", "amarillo");
+
+
     </script>
 </body>
 </html>
