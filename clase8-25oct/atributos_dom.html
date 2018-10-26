@@ -43,6 +43,14 @@
         width: 100%;
     }
 
+    .estiloInicial {
+        background: #838474;
+    }
+
+    .estiloModificado {
+        background: rgb(129, 255, 56);
+    }
+
     </style>
 
 </head>
@@ -51,8 +59,8 @@
     <!--PASO 0. Se crean los contenedores-->
     <section id="contenedor">
         
-        <div class=""></div>
-        <div class=""></div>
+        <div class="estiloInicial"></div>
+        <div class="estiloInicial"></div>
         <div id="texto"></div>
 
     </section>
@@ -118,6 +126,18 @@
         // Ahora le aplico miEstiloLibre
         elementoLibre.setAttribute("class", "miEstiloLibre");
 
+        // 5. Cambiar los estilos con el MÉTODO 1
+        // Voy a cambiar el tamaño de letra del texto que se insertó
+        elementoTexto.style.fontSize = "30px";
+        elementoTexto.style.fontStyle = "italic";
+
+        // 6. Cambiar los estilos con el MÉTODO 2
+        // Le cambiaré el estilo a los divs iniciales, que tienen la clase .estiloInicial
+        var divModificado = document.getElementsByTagName("div")[0];
+        // Ahora creo la regla para cambiar por otra clase .estiloModificado
+        //for (i = 0; i < divModificado.length; i++) {
+        divModificado.className = divModificado.className.replace("estiloInicial", "estiloModificado");
+        //}
     </script>
 </body>
 </html>
