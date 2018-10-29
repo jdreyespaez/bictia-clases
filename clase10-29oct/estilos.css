@@ -40,5 +40,15 @@ body {
     /* Color del fondo que tendrá el side-nav */
     background-color: #bd5d38;
 
+}
 
+.navbar-img {
+
+    margin: auto auto 0;
+    padding: .5rem;
+
+}
+
+a {
+    text-decoration: none;
 }
