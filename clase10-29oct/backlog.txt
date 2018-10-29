@@ -1,0 +1,5 @@
+Las tareas a hacer serán:
+
+1. Hacer una réplica del siguiente portafolio: https://blackrockdigital.github.io/startbootstrap-resume/
+2. Incuir con Vanilla JS la forma de navegar entre secciones
+3. Permitir al visitante la forma de contactar a Clarence
