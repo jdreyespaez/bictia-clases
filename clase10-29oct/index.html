@@ -17,6 +17,7 @@
 </head>
 <body>
     
+    <!-- Ésta es la barra de navegación izquierda -->
     <nav class="navbar" id="side-nav">
         <a class="navbar-img" href="#page-top">
             <span class="profile-pic">
@@ -24,22 +25,46 @@
             </span>
         </a>
 
+    <!--Aquí están los links de cada uno de los elementos que están en la barra lateral izquierda, 
+         es importante tener en cuenta que la hacer clic en alguno de los elementos éste llevará
+         a la sección correspondiente en el div contenedor
+    -->
         <div>
             <ul class="nav-bar">
-                <li class="nav-item">About</li>
-                <li id="nav-item">Experience</li>
-                <li id="nav-item">Education</li>
-                <li id="nav-item">Skills</li>
-                <li id="nav-item">Interests</li>
-                <li id="nav-item">Awards</li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About</a>                
+                </li>
+                <li id="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+                </li>
+                <li id="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+                </li>
+                <li id="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                </li>
+                <li id="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+                </li>
+                <li id="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+                </li>
             </ul>
         </div>
 
     </nav>
 
+    <!--Aquí está el contenido principal del portafolio-->
     <div class="contenedor">
 
-        <section class="section-item" id="about"></section>
+        <section class="section-item" id="about">
+            <div class="my-auto">
+                <h1>Clarence Taylor</h1>
+                <div class="subheading">
+                    3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
+                </div>
+            </div>
+        </section>
         <section class="section-item" id="experience"></section>
         <section class="section-item" id="education"></section>
         <section class="section-item" id="skills"></section>
