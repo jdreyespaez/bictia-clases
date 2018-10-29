@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    
+    /* Elimina los bullets points de la lista ul */
+    display: block;
 }
 
 body {
@@ -24,4 +27,18 @@ body {
     /* Se posiciona lo que esté adentro en el borde arriba y a la izquierda*/
     top: 0;
     left: 0;
+
+    /* Será el papá de los hijos que puedan usar CSS Flexbox*/
+    display: flex;
+    /* Mantener los elementos en una columna */
+    flex-direction: column;
+
+    /* El tamaño del side-nav */
+    width: 17rem;
+    height: 100vh;
+
+    /* Color del fondo que tendrá el side-nav */
+    background-color: #bd5d38;
+
+
 }
