@@ -1,6 +1,8 @@
 Las tareas a hacer serán:
 
 1. Hacer una réplica del siguiente portafolio: https://blackrockdigital.github.io/startbootstrap-resume/
-2. Incluir con Vanilla JS la forma de navegar entre secciones
-3. Permitir al visitante la forma de contactar a Clarence
-4. Crear una sección /now como la propuesta por https://sivers.org/now 
+    1.1. Fijándose en cómo se hace scroll en las secciones del portafolio
+    1.2. No se usará en la primera iteración el diseño responsive
+2. Permitir al visitante la forma de contactar a Clarence
+    2.1. Conectar con una base de datos en Mailchimp, para recolectar la información ahí
+3. Crear una sección /now como la propuesta por https://sivers.org/now 

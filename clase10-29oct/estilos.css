@@ -44,11 +44,27 @@ body {
 
 .navbar-img {
 
-    margin: auto auto 0;
+    display: flex;
+    margin: 0 auto;
     padding: .5rem;
 
 }
 
 a {
     text-decoration: none;
+}
+
+.profile-pic {
+
+    justify-content: center;
+
+}
+
+.img-profile {
+
+    max-width: 10rem;
+    max-height: 10rem;
+    border: .5rem solid rgba(255,255,255,.2);
+    border-radius: 50%;
+
 }
