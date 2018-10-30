@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timers</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    
+    
+    <script>                
+    
+    (function () {
+        function saludo() {
+            // alert("Hola");
+            console.log("Hola");
+        }
+
+        // Cumple la función cuando el tiempo indicado se ejecuta, sólo una vez
+        // setTimeout(saludo, 2000);
+        
+        // Cumple de forma cíclica
+        setInterval(saludo, 2000);
+
+    } ())
+
+    </script>
+</body>
+</html>
