@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validaciones</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    
+    <script>                
+
+        var js = {
+            instituto: "BICTIA",
+            instructor: "Kamilo",
+            alumnos: 23,
+            intro: function(){
+                console.log("Bienvenidos a " + this.instituto + " su profesor será " +
+                this.instructor + " y estará a cargo de un salín de " + this.alumnos + " estudiantes.");
+            },
+            empresas: "rappi"
+        };
+
+
+        
+
+        // La forma de acceder a lo que está adentro es mediante la palabra this
+        // Para acceder a los elementos, se puede hacer también como si fuera un arreglo
+        // o por el nombre de la propiedad.
+        console.log(js["instituto"]);
+        console.log(js.instructor);
+        console.log(js.intro());
+        console.log("Nos estamos preparando para la entrevista con " + js.empresas);
+
+    </script>
+</body>
+</html>

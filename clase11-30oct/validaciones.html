@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validaciones</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    
+    <form name="formulario" method="GET">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre"/>
+        <br><br>
+
+        <input type="radio" name="sexo" id="sexo" value="Hombre"/> Hombre
+        <input type="radio" name="sexo" id="sexo" value="Mujer"/> Mujer
+        <br><br>
+
+        <input type="checkbox" name="terminos" id="terminos"/> Acepto los términos
+        <br><br>
+
+        <input type="submit" name="boton" id="boton"/>
+
+    </form>
+    
+    <script>                
+    
+    // PASO 0: Para proteger los datos se crea una función auto-invocada
+    (function() {
+        // PASO 1: Llama el name="formulario" y de ese objeto trae todos los elementos formulario.elements
+        // además del botón
+        var formulario = document.getElementsByName("formulario")[0];
+        var elementos = formulario.elements;
+        var boton =document.getElementById("boton");
+
+        // PASO 3: Primero creo la función de validarNombre();
+        // donde ingresa al formulario y mediante name="nombre", quiero evaluar el value
+        // Usando e, prevengo el posible error que el usuario podría hacer
+        function validarNombre(e) {
+            if(formulario.nombre.value == 0){
+                alert("Debe completar el campo Nombre");
+                e.preventDefault();
+            }
+        }
+
+        // PASO 5: Creo una función que valide los datos tipo radio
+        // como son dos condiciones se usa un operador lógico de comparación
+        function validarRadio(e){
+            if(formulario.sexo(0).checked == true || formulario.sexo[1].checked){
+                
+            }
+        }
+
+        // PASO 6: La forma de validar en caso de que el checkbox esté true al enviar el formulario
+        function validarTerminos(e) {
+            if(formulario.checked == false){
+                alert("Debe aceptar los términos");
+                e.preventDefault();
+            }
+        }
+
+        // PASO 2: Se crea la función que valida el formulario
+        // PASO 4: Una vez creada la función validarNombre(), la "activo" en validar()
+        var validar = function(e) {
+            validarNombre(e);
+            validarRadio(e);
+            validarTerminos(e);
+            validarTerminos(e);
+        };
+
+        // PASO 1: crear el evento que quiero escuchar para usar mi función validar();
+    }())
+
+    </script>
+</body>
+</html>
