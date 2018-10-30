@@ -17,7 +17,7 @@
     
     <script>                
     
-    (function () {
+    /*(function () {
         function saludo() {
             // alert("Hola");
             console.log("Hola");
@@ -29,7 +29,45 @@
         // Cumple de forma cíclica
         setInterval(saludo, 2000);
 
-    } ())
+    } ())*/
+
+    // ¿Por qué al llamar una función auto-invocado con el .write no puedo ver la función
+    // en cambio, si uso console.log sí lo muestra?
+
+    // (function(){
+    //     var cont = 0;
+    //     function saludo(){
+    //         cont++;
+    //         document.write(cont + "<br>");
+
+    //         if(cont === 5) {
+    //             clearInterval(intervalo);
+    //             console.log("Entré al ciclo!");
+    //         }
+    //     }
+
+    //     var intervalo = setInterval(saludo, 1000);
+
+    // }())
+
+    // FECHAS
+
+    var fecha = new Date();
+
+    document.write(fecha.getHours() + "<br>");
+    document.write(fecha.getMinutes() + "<br>");
+    document.write(fecha.getSeconds() + "<br>");
+
+    // Los trae como en un arreglo iniciando en Domingo =[0]
+    document.write(fecha.getDay() + "<br>");
+
+    document.write(fecha.getDate() + "<br>");
+    
+    // Trae los meses empezando por Enero = [0]
+    document.write(fecha.getMonth() + "<br>");
+
+    document.write(fecha.getFullYear());
+
 
     </script>
 </body>
