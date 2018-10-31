@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timers</title>
+</head>
+<body>
+    <script>
+        /*(function(){
+            function saludo(){
+                //alert("Hola");
+                console.log("Hola");
+            };
+
+            // Cumple la función cuando se cumpla el tiempo indicado
+            setTimeout(saludo, 2000);
+
+            // Cumple función de manera cíclica cada vez que se cumpla el tiempo
+            //setInterval(saludo, 2000);
+        }())
+
+        (function(){
+            var cont = 0;
+            function saludo(){
+                cont++;
+                //console.log(cont);
+                document.write(cont + "<br>");
+
+                if(cont === 5){
+                    clearInterval(intervalo);
+                }
+            }
+
+            //setTimeout(saludo, 2000);
+
+            var intervalo = setInterval(saludo, 2000);
+        }())
+        */
+        
+
+        // Fechas
+        // al no devolver un parámetro, tomará la fecha actual del pc
+        var fecha = new Date();
+
+        document.write(fecha.getHours()+ "<br>");
+        document.write(fecha.getMinutes() + "<br>");
+        document.write(fecha.getSeconds() + "<br>");
+        document.write(fecha.getDay() + "<br>");
+        document.write(fecha.getDate() + "<br>");
+        document.write(fecha.getMonth() + "<br>");
+        document.write(fecha.getFullYear());
+        
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validaciones</title>
+</head>
+<body>
+    <form name="formulario" method="GET">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre"/>
+        <br><br>
+
+        <input type="radio" name="sexo" id="sexo" value="Hombre"/> Hombre
+        <input type="radio" name="sexo" id="sexo" value="Mujer"/> Mujer
+        <br><br>
+
+        <input type="checkbox" name="terminos" id="terminos"/> Acepto los términos
+        <br><br>
+
+        <input type="submit" name="boton" id="boton"/>
+    </form>
+
+
+    <script>
+        (function(){
+
+            var formulario = document.getElementsByName("formulario")[0];
+            var elementos = formulario.elements;
+            var boton = document.getElementById("boton");
+
+            function validarNombre(e){
+                if(formulario.nombre.value == 0){
+                    alert("Debe completar el campo Nombre");
+                    e.preventDefault();
+                }
+            }
+
+           function validarRadio(e){
+                if(formulario.sexo[0].checked == true || formulario.sexo[1].checked == true){
+                } else {
+                    alert("Debe especificar su sexo");
+                    e.preventDefault();
+                }
+            }
+
+            function validarTerminos(e){
+                if(formulario.terminos.checked == false){
+                    alert("Debe aceptar los términos");
+                    e.preventDefault();
+                }
+            }
+
+            var validar = function(e){
+                validarNombre(e);
+                validarRadio(e);
+                validarTerminos(e);
+            };
+
+            formulario.addEventListener("submit", validar);
+
+        }())
+    </script>
+</body>
+</html>

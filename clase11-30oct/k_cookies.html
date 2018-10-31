@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookies</title>
+</head>
+<body>
+    <script>
+            // Crear una cookie
+            //La cookie debe tener un nombre
+            // puede tener una fecha de expiración formato UTC
+            // ruta, dominio
+            // ej: document.cookie = "nombre = Pepe; expires=Thu, 16 Nov 2017 12:00:00 UTC; path=/;";
+            document.cookie = "usuario = Pepe;";
+            document.cookie = "nombre = Hijo de Pepe"
+
+            //Leer cookie
+            var miCookie = document.cookie;
+            alert(miCookie);
+
+            //Modificar Cookie
+            document.cookie = "usuario = Kamilo;";
+            alert(document.cookie);
+
+            //Borrar una cookie
+            //document.cookie = "usuario=; expire=Thu, 01 Jan 1970 00:00:01 GMT";
+            //document.cookie = "nombre=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+            alert(document.cookie);
+
+    </script>
+</body>
+</html>
