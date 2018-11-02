@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eventos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <button id="boton">Boton</button>
+    <input type="text" id="entrada" />
+
+    <script>
+
+            function saludo(){
+                alert("Hola");
+            }
+
+            
+            function estado(){
+                document.write("Cómo estás")
+            }
+            
+
+            var boton = document.getElementById("boton");
+            boton.addEventListener("click", saludo);
+            boton.addEventListener("click", estado);
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <div>
+        <h1>Hola</h1>
+    </div>
+
+    <div id="prueba">
+        <p>Uno</p>
+        <p id="second">Dos</p>
+        <p>Tres</p>
+    </div>
+
+    <div>
+        <p>Cuatro</p>
+        <p>Cinco</p>
+    </div>
+
+    <script>
+        // Acceder a un elemento por medio de etiquetas
+        var elementoP = document.getElementsByTagName("p");
+        // Acceder a un elemento por medio del Id
+        var segundo = document.getElementById("second");
+
+        //Crear un nodo
+        // 1. Crear el elemento
+        var elemento = document.createElement("h2");
+        // 2. Crear nodo de texto
+        var contenido = document.createTextNode("Soy Nuevo");
+        // 3. Agregar el nodo al elemento
+        elemento.appendChild(contenido);
+        // 4. Agregar el elemento al documento
+        document.getElementById("prueba").appendChild(elemento);
+
+
+
+        //Posicionar un nodo
+        var padre = document.getElementsByTagName("p")[0].parentNode;
+        var hijo1 = document.getElementsByTagName("p")[1];
+        
+        padre.insertBefore(elemento, hijo1);
+
+
+        //Reemplazar contenido de un nodo
+        elemento.innerHTML = "Querido <i>Pepe</i>";
+        //elemento.textContent = "Querido <i>Pepe</i>";
+
+
+        // Reemplazar un nodo
+        var cambio = document.getElementsByTagName("p")[2];
+        //padre.replaceChild(elemento, cambio);
+
+
+        // Eliminar nodo
+        padre.removeChild(elemento);
+
+
+    </script>
+    
+</body>
+</html>

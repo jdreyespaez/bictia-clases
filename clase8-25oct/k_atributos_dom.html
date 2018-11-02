@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Modificar Atributos DOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: #dddddd;
+            display: inline-block;
+            margin-right: 10px;
+            border: 1px solid #aaaaaa;
+        }
+
+        .azul{
+            background: #0000FF;
+            border: 1px solid #000;
+        }
+
+        .rojo{
+            background: #FF0000;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <section id="contenedor">
+        <div class=""></div>
+        <div class=""></div>
+    </section>
+
+    <script>
+            //Creamos el elemento
+            var elemento = document.createElement("div");
+            //Buscamos el padre de los elementos por medio del ID en este caso
+            var padre = document.getElementById("contenedor");
+            // Creamos una variable referencia para poder insertar nuestro nuevo elemento
+            var ref = document.getElementsByTagName("div")[0];
+            // Agregamos el elemento en la posición que deseamos de acuerdo a nuestra variable ref
+            padre.insertBefore(elemento, ref);
+            // Damos un atributo y un valor con el método setAttribute
+            // variable.setAttribute("atributo", "valor")
+            elemento.setAttribute("class", "azul");
+            // Cambiarmos el valor de una clase por medio del método className
+            elemento.className = "rojo"
+    
+        </script>
+</body>
+</html>

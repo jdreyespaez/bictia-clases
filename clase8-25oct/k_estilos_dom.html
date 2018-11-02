@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Modificar Estilos DOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .titulo{
+            font-size: 60px;
+        }
+
+        .subtitulo{
+            border: 1px solid navy;
+            background: #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="encabezado" class="titulo subtitulo">Me van a cambiar los estilos :D</h1>
+
+    <script>
+            var encabezado = document.getElementById("encabezado");
+            //encabezado.style.background = "lightblue";
+            //encabezado.style.color = "#fff";
+            //encabezado.style.paddingTop = "20px";
+            encabezado.className = encabezado.className.replace("subtitulo", "");
+    </script>
+
+    
+</body>
+</html>
