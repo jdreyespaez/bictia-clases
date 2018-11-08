@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de Registro</title>
+</head>
+
+<body>
+    
+    <form name="registro" action="" method="GET" onsubmit="return crear_registro(this);">
+            <h1>Datos</h1>
+
+            <input type="text" placeholder="Nombres" name="Nombre" id="Nombre" onChange="validarSiLetra(this.value);"/><br><br>
+            <input type="text" placeholder="Apellidos" name="Apellido" id="Apellido" onChange="validarSiLetra(this.value);"/><br><br>
+            <label>Fecha de Nacimiento</label><br><br>
+            <div id="fecha">
+                <input type="text" placeholder="Dia" name="Dia" id="Dia" onChange="validarSiNumero(this.value);"/>
+                <select type="Mes" id="Mes" name="Mes">
+                    <option type="Meses" value="0">Mes</option>
+                    <option type="Meses" value="1">Enero</option>
+                    <option type="Meses" value="2">Febrero</option>
+                    <option type="Meses" value="3">Marzo</option>
+                    <option type="Meses" value="4">Abril</option>
+                    <option type="Meses" value="5">Mayo</option>
+                    <option type="Meses" value="6">Junio</option>
+                    <option type="Meses" value="7">Julio</option>
+                    <option type="Meses" value="8">Agosto</option>
+                    <option type="Meses" value="9">Septiembre</option>
+                    <option type="Meses" value="10">Octubre</option>
+                    <option type="Meses" value="11">Noviembre</option>
+                    <option type="Meses" value="12">Diciembre</option>
+                </select>
+                <input type="text" placeholder="Año" name="Anio" id="Año" onChange="validarSiNumero(this.value);" /><br><br>
+            </div>
+            <input type="email" placeholder="Correo" id="Correo" name="Correo" /><br><br>
+            <input type="text" placeholder="Direccion" id="Direccion" name="Direccion" /><br><br>
+
+            <input name="boton" type="submit" value="Registrar" id="Registrar" onclick="" />
+            <input type="reset" value="Borrar" id="Borrar" onclick="" />
+
+        </form>
+        <pre id="output">
+                Datos del JSON...
+        </pre>
+    
+    <script rel="text/javascript" src="formulario+cookies.js"></script>
+
+</body>
+</html>
+
+
