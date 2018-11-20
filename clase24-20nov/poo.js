@@ -1,3 +1,4 @@
+// Por convención las clases siempre se escriben en mayúscula
 class Persona {
     // Con el constructo se definen las variables que se recibirán
     // y guardarlas en objeto usando this
@@ -22,3 +23,16 @@ console.log(saludo);
 var otraPersona = new Persona('Germán Rodrigo', 38);
 console.log(otraPersona);
 console.log(otraPersona.presentarse())
+
+class Perro {
+    constructor(nombre, raza){
+        this.nombre = nombre
+        this.raza = raza
+    }
+    ladrar(){
+        return "Soy un " + this.raza + " y ladro así: Guau, guau!!!";
+    }
+}
+
+var loboSiberiano = new Perro('Asgard', 'Lobo Siberiano')
+console.log(loboSiberiano.ladrar())
