@@ -44,6 +44,7 @@ class Profesion extends Persona{
         // super nos indican que nombre y edad están declarados en la clase padre
         super(nombre, edad);
         this.cargo = cargo;
+        // éstas son las propiedad de esta clase
     }
 
     presentarse(){
