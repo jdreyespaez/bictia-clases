@@ -8,7 +8,7 @@ class Persona {
     }
     // También se pueden incluir métodos dentro del objeto
     presentarse(){
-        return "Me llamo " + this.nombre + " y tengo " + this.edad + " años.";
+        return "Me llamo " + this.nombre + ", tengo " + this.edad + " años";
     }
 }
 
@@ -34,5 +34,25 @@ class Perro {
     }
 }
 
-var loboSiberiano = new Perro('Asgard', 'Lobo Siberiano')
-console.log(loboSiberiano.ladrar())
+var loboSiberiano = new Perro('Asgard', 'Lobo Siberiano');
+console.log(loboSiberiano.ladrar());
+
+// HERENCIA DE CLASES
+// Es posible también heredar de una clase
+class Profesion extends Persona{
+    constructor(nombre, edad, cargo){
+        // super nos indican que nombre y edad están declarados en la clase padre
+        super(nombre, edad);
+        this.cargo = cargo;
+    }
+
+    presentarse(){
+        // Aquí también la palabra super, llama el método que está en la clase padre
+        return super.presentarse() + " y trabajo como " + this.cargo;
+    }
+}
+
+var juanDavid = new Profesion('Juan David', 28, 'Indie Hacker');
+var miVisionDesdeHoy = juanDavid.presentarse();
+console.log(juanDavid);
+console.log(miVisionDesdeHoy);
