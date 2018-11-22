@@ -1,6 +1,6 @@
 var fs = require('fs'),
     file = './juegos.txt',
-    mewFile = './juegos_CALLBACK.txt'
+    newFile = './juegos_CALLBACK.txt'
 
 fs.access(file, fs.F_OK, function(err){
     if(err){
