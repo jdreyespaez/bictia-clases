@@ -24,6 +24,8 @@ mongoose.connect(config.DB, {useNewUrlParser: true}). then(
 app.use(bodyParser.json())
 app.use('/api', routes)
 
+// MIDDLEWARE: nos permite de una forma más fácil los posibles errores que pueden llegar
+// nos los devuelve en un objeto
 app.use(function(err, req, res, next){
     res.status(422),send({error: err.message})
 })
