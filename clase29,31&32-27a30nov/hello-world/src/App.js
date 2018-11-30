@@ -96,6 +96,13 @@ class App extends Component{
 
   }
 
+  // Nueva línea clase 32
+  handleAgregarTarea(listaNueva){
+    this.setState({
+      lista: [...this.state.lista, listaNueva]
+    })
+  }
+
 render(){
   const lista = this.state.lista.map((tarea, i) => {
     return(
