@@ -96,12 +96,14 @@ class App extends Component{
 
   }
 
-  // Nueva línea clase 32
+
+  // Nueva línea clase 32 ----------------------------
   handleAgregarTarea(listaNueva){
     this.setState({
       lista: [...this.state.lista, listaNueva]
     })
   }
+  // -------------------------------------------------
 
 render(){
   const lista = this.state.lista.map((tarea, i) => {
@@ -111,11 +113,15 @@ render(){
   })
 
   return(
-    <div>
+    <div className="container">
       <div>
-        <span>
+        <span className="contador">
           {this.state.lista.length}
         </span>
+      </div>
+
+      <div>
+        <Formulario onAgregarTarea = {this.handleAgregarTarea} />
       </div>
 
       <div>
