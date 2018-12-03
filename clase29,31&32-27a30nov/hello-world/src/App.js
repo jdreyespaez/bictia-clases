@@ -92,6 +92,7 @@ class App extends Component{
     }
 
     // Nueva línea clase 32
+    // El objetivo es que nos tome handleAgregarTarea como un objeto global
     this.handleAgregarTarea = this.handleAgregarTarea.bind(this)
 
   }
