@@ -1,0 +1,10 @@
+.container{
+  background-color: black;
+  margin: 1px solid white inset
+}
+
+.contador{
+  color: white;
+  font-family: 'Bauhaus 93'
+}
+
